@@ -44,7 +44,7 @@
         </li>
       {%- endfor -%}
     </ul>
-    {%- render 'pagination', paginate: paginate 1000-%}
+    {%- render 'pagination', paginate: paginate -%}
   {%- endpaginate -%}
 </div>
 {% schema %}
@@ -138,3 +138,13 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- render 'pagination', paginate: paginate 1000-%}"
+  to: "{%- render 'pagination', paginate: paginate -%}"
+  position: 1798..1845
+{% endcomment %}

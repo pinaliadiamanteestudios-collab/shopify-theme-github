@@ -100,7 +100,7 @@
           </table>
         </div>
         <div class="js-paginate">
-          {% render 'pagination', paginate: paginate 1000-%}
+          {% render 'pagination', paginate: paginate -%}
         </div>
       {%- endpaginate -%}
 
@@ -298,3 +298,13 @@
     <span class="quick-order-list-error-message caption-large" role="alert"></span>
   </template>
 </div>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% render 'pagination', paginate: paginate 1000-%}"
+  to: "{% render 'pagination', paginate: paginate -%}"
+  position: 4220..4266
+{% endcomment %}
